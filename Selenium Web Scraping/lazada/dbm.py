@@ -9,7 +9,9 @@ c = conn.cursor()
 
 def read():
     df = pd.read_sql_query("select * from lazada_product;", conn)
+    print(type(df))
     return df
+
 
 def write_values(id,link,product_title,product_price,category):
     c.execute("INSERT INTO lazada_product VALUES "
