@@ -1,3 +1,5 @@
+#Actual code for the
+
 import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
@@ -53,28 +55,29 @@ dict_products = [
 app.layout = html.Div([
 
     html.Div([
-        html.H1('Machine Data Visualization Dashboard'),
-        # html.H1('Price Optimization Dashboard'),
-        # html.H2('Choose a product name'),
-        html.H2('Choose a machine name'),
+        html.H1('Caterpillar Machine Data Visualization Dashboard'),
+        html.H2('Choose machine to analyze below'),
         dcc.Dropdown(
             id='machine-dropdown',
             options=dict_products,
             multi=True,
             value=["Machine Z"]
         ),
+        html.H3('Outlier breakdown'),
         dcc.Graph(
             id='machine-like-bar'
         )
     ], style={'width': '40%', 'display': 'inline-block'}),
     html.Div([
         # html.H2('All product info'),
-        html.H2('All machine info'),
+        html.H2('All machine info: ',
+                'Breakdown of value of unit price, expected values, current values, sensor estimates, and price delta'
+                'to swap sensor listed below'),
         html.Table(id='my-table'),
         html.P(''),
     ], style={'width': '55%', 'float': 'right', 'display': 'inline-block'}),
     html.Div([
-        html.H2('Machine graph'),
+        html.H2('Sensor value graph over time'),
         dcc.Graph(id='machine-trend-graph'),
         html.P('')
     ], style={'width': '100%', 'display': 'inline-block'}),
