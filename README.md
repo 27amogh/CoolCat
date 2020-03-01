@@ -1,6 +1,10 @@
 This our data analysis project for the Caterpillar competition.
 
 *************************************** HOW TO *****************************************************
+IMPORTANT: First click link below that includes a brief summary of our project.
+
+https://www.youtube.com/watch?v=sIlNIVXpIns
+
 1) To run just run the dashboard program and click link displayed in output to reach localhost server
 or run individual program files alone and follow instructions through scanner.
 
